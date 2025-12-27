@@ -1,0 +1,264 @@
+:root {
+  --bg-primary: #ffffff;
+  --bg-secondary: #f6f7f9;
+  --border: #cbd5e1;
+  --text-primary: #111827;
+  --text-secondary: #4b5563;
+  --text-muted: #6b7280;
+
+  --accent: #2563eb;
+  --container-max: 1100px;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.6;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.container {
+  max-width: var(--container-max);
+  margin: auto;
+  padding: 0 20px;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: white;
+  border-bottom: 1px solid var(--border);
+}
+
+.nav-container {
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.logo-dot {
+  color: var(--accent);
+}
+
+.nav-links {
+  display: flex;
+  gap: 18px;
+}
+
+.nav-links a {
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+.hero {
+  padding-top: 120px;
+  padding-bottom: 60px;
+  background: var(--bg-secondary);
+}
+
+.hero-content {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero-greeting {
+  color: var(--accent);
+  font-size: 14px;
+}
+
+.hero-name {
+  font-size: 42px;
+  margin: 10px 0;
+}
+
+.hero-title {
+  font-size: 18px;
+  color: var(--text-secondary);
+}
+
+.hero-description {
+  max-width: 600px;
+  margin: 14px auto;
+  color: var(--text-muted);
+}
+
+.hero-buttons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.btn {
+  padding: 10px 22px;
+  font-size: 14px;
+  border-radius: 6px;
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: white;
+}
+
+.btn-secondary {
+  border: 1px solid var(--accent);
+  background: white;
+  color: var(--accent);
+}
+
+.section {
+  padding: 60px 0;
+}
+
+.light {
+  background: var(--bg-secondary);
+}
+
+.section-title {
+  font-size: 26px;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.highlight {
+  color: var(--accent);
+}
+
+.section-text {
+  max-width: 700px;
+  margin: auto;
+  text-align: center;
+  color: var(--text-secondary);
+}
+
+.skills-simple {
+  max-width: 600px;
+  margin: auto;
+}
+
+.skills-simple ul {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px 20px;
+}
+
+.skills-simple li {
+  list-style: none;
+  padding: 10px 14px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.project-card {
+  border: 1px solid var(--border);
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.education-list {
+  max-width: 700px;
+  margin: auto;
+}
+
+.education-item {
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 8px;
+  margin-bottom: 16px;
+}
+
+.education-item span {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.contact-text {
+  text-align: center;
+  color: var(--text-secondary);
+}
+
+@media (max-width: 600px) {
+  .skills-simple ul {
+    grid-template-columns: 1fr;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .hero-name {
+    font-size: 32px;
+  }
+}
+.contact-blocks {
+  max-width: 800px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.contact-block {
+  border: 1px solid var(--border);
+  padding: 20px;
+  border-radius: 8px;
+  background: white;
+  text-align: center;
+}
+
+.contact-block h3 {
+  font-size: 15px;
+  margin-bottom: 8px;
+  color: var(--text-primary);
+}
+
+.contact-block a {
+  font-size: 14px;
+  color: var(--accent);
+  word-break: break-all;
+}
+
+@media (max-width: 600px) {
+  .contact-blocks {
+    grid-template-columns: 1fr;
+  }
+}
+.project-card,
+.education-item,
+.contact-block,
+.skills-simple li {
+  background: #ffffff;
+  border: 1.5px solid var(--border);
+}
+.project-card,
+.education-item,
+.contact-block {
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+}
+
